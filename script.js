@@ -99,12 +99,10 @@ function game() {
     
     resetScore()
 
-    //5 round play
-    for (let i = 0; i < 5; i++) {
+    //10 round play
+    for (let i = 0; i < 10; i++) {
 
-        const answer = prompt('What is your turn?')
-
-        const playerSelection = answer.slice(0,1).toUpperCase() + answer.slice(1,).toLowerCase()
+      
         const computerSelection = computerPlay()
 
         const result = playRound(playerSelection, computerSelection)
@@ -124,3 +122,8 @@ function game() {
     }
 
 }
+
+//Event Listeners
+
+playButton = document.querySelector('.btn-reset')
+playButton.addEventListener('click', game);
