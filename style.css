@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: solid 1px red;
+}
+
+
+body {
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Gamja Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 18px;
+
+    position: static;
+    width: 112px;
+    height: 40px;
+    left: 26px;
+    top: 693px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Black */
+
+    border: 3px solid #333333;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-family: 'Gamja Flower', cursive;
+    font-size: 16px;
+}
+
+button:hover {
+    filter: invert(100%);
+}
+
+.btn-turn img {
+    height: 30px;
+    width: auto;
+}
+
+#main-window {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#player-turn-window, #computer-turn-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#player-window, #computer-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-window img, #computer-window img{
+    width: 300px;
+    height: 300px;
+}
+
+.btn-reset {
+    justify-content: center;
+}
+
+#alert-endgame {
+    width: 500px;
+    height: 400px;
+}
+
+.btn-endgame {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 75px;
+}
+
+.btn-endgame button{
+    display: flex;
+    justify-content: center;
+}
+
+#alert-endgame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+
+#alert-endgame img {
+    width: 300px;
+    height: 200px;
+}
