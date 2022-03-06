@@ -264,7 +264,7 @@ const paper = document.querySelector('#player-paper-turn')
 paper.addEventListener('click', () => {
     playerSelection = paper.innerText;
     resetTurnStyle()
-    paper.setAttribute('style', 'filter: invert(100%)')
+    invertStyle(paper)
     game()
 })
 
@@ -272,7 +272,7 @@ const scissors = document.querySelector('#player-scissor-turn')
 scissors.addEventListener('click', () => {
     playerSelection = scissors.innerText;
     resetTurnStyle()
-    scissors.setAttribute('style', 'filter: invert(100%)')
+    invertStyle(scissors)
     game()
 })
 
@@ -280,7 +280,7 @@ const lizard = document.querySelector('#player-lizard-turn')
 lizard.addEventListener('click', () => {
     playerSelection = lizard.innerText;
     resetTurnStyle()
-    lizard.setAttribute('style', 'filter: invert(100%)')
+    invertStyle(lizard)
     game()
 })
 
@@ -288,7 +288,7 @@ const spock = document.querySelector('#player-spock-turn')
 spock.addEventListener('click', () => {
     playerSelection = spock.innerText;
     resetTurnStyle()
-    spock.setAttribute('style', 'filter: invert(100%)')
+    invertStyle(spock)
     game()
 })
 
