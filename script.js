@@ -27,170 +27,170 @@ function playRound(playerSelection, computerSelection) {
             round += 1
             turnLabel()
             addScoreLabel()
-            compPaper.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compPaper)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} covers ${playerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Spock') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compSpock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compSpock)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} vaporizes ${playerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compScissors.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compScissors)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} crushes ${computerSelection}`
         }  else if (playerSelection === 'Rock' && computerSelection === 'Lizard') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compLizard.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compLizard)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} crushes ${computerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compScissors.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compScissors)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} cuts ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Lizard') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compLizard.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compLizard)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} eats ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compRock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compRock)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} covers ${computerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Spock') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compSpock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compSpock)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} disproves ${computerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compRock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compRock)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} crushes ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Spock') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compSpock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compSpock)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} smashes ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compPaper.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compPaper)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} cuts ${computerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Lizard') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compLizard.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compLizard)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} decapitates ${computerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Scissors') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compScissors.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compScissors)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} decapitates ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Rock') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compRock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compRock)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} crushes ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Paper') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compPaper.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compPaper)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} eats ${computerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Spock') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compSpock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compSpock)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} poisons ${computerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Lizard') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compLizard.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compLizard)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} poisons ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Paper') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compPaper.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compPaper)
             turnScreen.textContent = `Round ${round} You lost! ${computerSelection} disproves ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Rock') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compRock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compRock)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} vaporizes ${computerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Scissors') {
             playerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
-            compScissors.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compScissors)
             turnScreen.textContent = `Round ${round} You won! ${playerSelection} smashes ${computerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Rock') {
             round += 1
             turnLabel()
             addScoreLabel()
-            compRock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compRock)
             turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Paper') {
             round += 1
             turnLabel()
             addScoreLabel()
-            compPaper.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compPaper)
             turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors') {
             round += 1
             turnLabel()
             addScoreLabel()
-            compScissors.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compScissors)
             turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Lizard') {
             round += 1
             turnLabel()
             addScoreLabel()
-            compLizard.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compLizard)
             turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Spock') {
             round += 1
             turnLabel()
             addScoreLabel()
-            compSpock.setAttribute('style', 'filter: invert(100%)')
+            invertStyle(compSpock)
             turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
         } else {
             round += 1
@@ -217,8 +217,7 @@ function checkScore(playerScore, computerScore) {
 function game() {
     computerSelection = computerPlay()
 
-    const result = playRound(playerSelection, computerSelection)
-    console.log(result)
+    playRound(playerSelection, computerSelection)
 }
 
 function turnLabel() {
@@ -242,6 +241,10 @@ function resetTurnStyle() {
     compScissors.setAttribute('style', 'filter: invert(0%)')
     compLizard.setAttribute('style', 'filter: invert(0%)')
     compSpock.setAttribute('style', 'filter: invert(0%)')
+}
+
+function invertStyle(element) {
+    element.setAttribute('style', 'filter: invert(100%)')
 }
 
 //Event Listeners
