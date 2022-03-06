@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: solid 1px red;
 }
 
 
@@ -81,11 +80,6 @@ button:hover {
     justify-content: center;
 }
 
-#alert-endgame {
-    width: 500px;
-    height: 400px;
-}
-
 .btn-endgame {
     display: flex;
     justify-content: space-evenly;
@@ -95,21 +89,6 @@ button:hover {
 .btn-endgame button{
     display: flex;
     justify-content: center;
-}
-
-#alert-endgame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    position: fixed;
-    display: none;
-}
-
-#alert-endgame img {
-    width: 300px;
-    height: 200px;
 }
 
 #turn-screen {

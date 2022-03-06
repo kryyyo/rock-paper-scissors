@@ -15,20 +15,24 @@ function computerPlay() {
     return computerTurn
 }
 
-function playRound(playerSelection, computerSelection) {
-    if (round >= 10) {
-        console.log(playerScore)
-        console.log(computerScore)
-        console.log(checkScore(playerScore, computerScore))
-
+function firstToTen() {
+    if (playerScore === 10 || computerScore === 10) {
+        turnScreen.textContent = checkScore(playerScore, computerScore)
+        resetTurnStyle()
     } else {
+        return
+    }
+}
+
+function playRound(playerSelection, computerSelection) {
+    if (playerScore < 10 && computerScore < 10) {
         if (playerSelection === 'Rock' && computerSelection === 'Paper') {
             computerScore += 1
             round += 1
             turnLabel()
             addScoreLabel()
             invertStyle(compPaper)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} covers ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} covers ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-rock.gif'
             imageComputerGif.src = './gifs/win-paper.gif'
 
@@ -38,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compSpock)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} vaporizes ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} vaporizes ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-rock.gif'
             imageComputerGif.src = './gifs/win-spock.gif'
 
@@ -48,7 +52,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compScissors)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} crushes ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} crushes ${computerSelection}`
             imagePlayerGif.src = './gifs/win-rock.gif'
             imageComputerGif.src = './gifs/lose-scissors.gif'
 
@@ -58,7 +62,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compLizard)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} crushes ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} crushes ${computerSelection}`
             imagePlayerGif.src = './gifs/win-rock.gif'
             imageComputerGif.src = './gifs/lose-lizard.gif'
 
@@ -68,7 +72,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compScissors)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} cuts ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} cuts ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-paper.gif'
             imageComputerGif.src = './gifs/win-scissors.gif'
 
@@ -78,7 +82,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compLizard)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} eats ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} eats ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-paper.gif'
             imageComputerGif.src = './gifs/win-lizard.gif'
 
@@ -88,7 +92,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compRock)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} covers ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} covers ${computerSelection}`
             imagePlayerGif.src = './gifs/win-paper.gif'
             imageComputerGif.src = './gifs/lose-rock.gif'
 
@@ -98,7 +102,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compSpock)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} disproves ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} disproves ${computerSelection}`
             imagePlayerGif.src = './gifs/win-paper.gif'
             imageComputerGif.src = './gifs/lose-spock.gif'
 
@@ -108,7 +112,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compRock)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} crushes ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} crushes ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-scissors.gif'
             imageComputerGif.src = './gifs/win-rock.gif'
 
@@ -118,7 +122,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compSpock)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} smashes ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} smashes ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-scissors.gif'
             imageComputerGif.src = './gifs/win-spock.gif'
 
@@ -128,7 +132,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compPaper)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} cuts ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} cuts ${computerSelection}`
             imagePlayerGif.src = './gifs/win-scissors.gif'
             imageComputerGif.src = './gifs/lose-paper.gif'
 
@@ -138,7 +142,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compLizard)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} decapitates ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} decapitates ${computerSelection}`
             imagePlayerGif.src = './gifs/win-scissors.gif'
             imageComputerGif.src = './gifs/lose-lizard.gif'
 
@@ -148,7 +152,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compScissors)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} decapitates ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} decapitates ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-lizard.gif'
             imageComputerGif.src = './gifs/win-scissors.gif'
 
@@ -158,7 +162,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compRock)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} crushes ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} crushes ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-lizard.gif'
             imageComputerGif.src = './gifs/win-rock.gif'
 
@@ -168,7 +172,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compPaper)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} eats ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} eats ${computerSelection}`
             imagePlayerGif.src = './gifs/win-lizard.gif'
             imageComputerGif.src = './gifs/lose-paper.gif'
 
@@ -178,7 +182,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compSpock)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} poisons ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} poisons ${computerSelection}`
             imagePlayerGif.src = './gifs/win-lizard.gif'
             imageComputerGif.src = './gifs/lose-spock.gif'
 
@@ -189,7 +193,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compLizard)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} poisons ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} poisons ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-spock.gif'
             imageComputerGif.src = './gifs/win-lizard.gif'
 
@@ -200,7 +204,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compPaper)
-            turnScreen.textContent = `Round ${round} You lost! ${computerSelection} disproves ${playerSelection}`
+            turnScreen.textContent = `You lost! ${computerSelection} disproves ${playerSelection}`
             imagePlayerGif.src = './gifs/lose-spock.gif'
             imageComputerGif.src = './gifs/win-paper.gif'
 
@@ -210,7 +214,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compRock)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} vaporizes ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} vaporizes ${computerSelection}`
             imagePlayerGif.src = './gifs/win-spock.gif'
             imageComputerGif.src = './gifs/lose-rock.gif'
 
@@ -220,7 +224,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compScissors)
-            turnScreen.textContent = `Round ${round} You won! ${playerSelection} smashes ${computerSelection}`
+            turnScreen.textContent = `You won! ${playerSelection} smashes ${computerSelection}`
             imagePlayerGif.src = './gifs/win-spock.gif'
             imageComputerGif.src = './gifs/lose-scissors.gif'
 
@@ -229,7 +233,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compRock)
-            turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
+            turnScreen.textContent = `It's a tie. You both use ${playerSelection}`
             imagePlayerGif.src = './gifs/win-rock.gif'
             imageComputerGif.src = './gifs/win-rock.gif'
 
@@ -238,7 +242,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compPaper)
-            turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
+            turnScreen.textContent = `It's a tie. You both use ${playerSelection}`
             imagePlayerGif.src = './gifs/win-paper.gif'
             imageComputerGif.src = './gifs/win-paper.gif'
 
@@ -248,7 +252,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compScissors)
-            turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
+            turnScreen.textContent = `It's a tie. You both use ${playerSelection}`
             imagePlayerGif.src = './gifs/win-scissors.gif'
             imageComputerGif.src = './gifs/win-scissors.gif'
 
@@ -258,7 +262,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compLizard)
-            turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
+            turnScreen.textContent = `It's a tie. You both use ${playerSelection}`
             imagePlayerGif.src = './gifs/win-lizard.gif'
             imageComputerGif.src = './gifs/win-lizard.gif'
 
@@ -268,7 +272,7 @@ function playRound(playerSelection, computerSelection) {
             turnLabel()
             addScoreLabel()
             invertStyle(compSpock)
-            turnScreen.textContent = `Round ${round} It's a tie. You both use ${playerSelection}`
+            turnScreen.textContent = `It's a tie. You both use ${playerSelection}`
             imagePlayerGif.src = './gifs/win-spock.gif'
             imageComputerGif.src = './gifs/win-spock.gif'
 
@@ -278,16 +282,21 @@ function playRound(playerSelection, computerSelection) {
             computerScore += 1
             turnLabel()
             addScoreLabel()
-            turnScreen.textContent = `Round ${round} Wrong input! Score goes to Computer`
+            turnScreen.textContent = `Wrong input! Score goes to Computer`
         }
+        
+    } else {
+        return
     }
+
+    firstToTen()
 }
 
 function checkScore(playerScore, computerScore) {
         if (playerScore > computerScore) {
-            return `You won! Your score: ${playerScore}; Computer score: ${computerScore}`
+            return `You won! Your score: ${playerScore}, Computer score: ${computerScore}`
         } else if (playerScore < computerScore) {
-            return `You lost! Your score: ${playerScore}; Computer score: ${computerScore}`
+            return `You lost! Your score: ${playerScore}, Computer score: ${computerScore}`
         } else if (playerScore === computerScore) {
             return `It's a tie! You both scored: ${computerScore}`
         } else {
@@ -394,3 +403,9 @@ const turnScreen = document.querySelector('#turn-screen p')
 const imagePlayerGif = document.querySelector('#player-window img')
 const imageComputerGif = document.querySelector('#computer-window img')
 
+//Game Alert End 
+const alertEndWindow = document.querySelector('#alert-endgame')
+
+if (turnScreen.textContent.slice(0, 7) === 'Round 10') {
+    alertEndWindow.id = 'alert-show'
+}   
