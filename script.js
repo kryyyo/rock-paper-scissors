@@ -154,6 +154,8 @@ function playRound(playerSelection, computerSelection) {
 
 function resetScore() {
     round = 0;
+    labelPlayerTurn.textContent = '';
+    labelComputerTurn.textContent = '';
     playerScore = 0;
     computerScore = 0;  
     turnScreen.textContent = '';
@@ -180,7 +182,7 @@ function game() {
 
 function turnLabel() {
     labelPlayerTurn.textContent = playerSelection;
-    labelcomputerTurn.textContent = computerSelection;
+    labelComputerTurn.textContent = computerSelection;
 }
 
 //Event Listeners
@@ -230,8 +232,8 @@ const compSpock = document.querySelector('#computer-spock-turn')
 const labelPlayerTurn = document.querySelector('#player-window h3')
 const labelPlayerScore = document.querySelector('#player-score strong')
 
-const labelcomputerTurn = document.querySelector('#computer-window h3')
-const labelcomputerScore = document.querySelector('#computer-score strrong')
+const labelComputerTurn = document.querySelector('#computer-window h3')
+const labelComputerScore = document.querySelector('#computer-score strrong')
 
 const turnScreen = document.querySelector('#turn-screen p')
 
