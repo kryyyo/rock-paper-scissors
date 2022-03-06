@@ -26,126 +26,152 @@ function playRound(playerSelection, computerSelection) {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} covers ${playerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Spock') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} vaporizes ${playerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} crushes ${computerSelection}`
         }  else if (playerSelection === 'Rock' && computerSelection === 'Lizard') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} crushes ${computerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} cuts ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Lizard') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} eats ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} covers ${computerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Spock') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} disproves ${computerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} crushes ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Spock') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} smashes ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} cuts ${computerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Lizard') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} decapitates ${computerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Scissors') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} decapitates ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Rock') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} crushes ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Paper') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} eats ${computerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Spock') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} poisons ${computerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Lizard') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} poisons ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Paper') {
             computerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You lost! ${computerSelection} disproves ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Rock') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} vaporizes ${computerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Scissors') {
             playerScore += 1
             round += 1
             turnLabel()
+            addScoreLabel()
             return `You won! ${playerSelection} smashes ${computerSelection}`
         } else if (playerSelection === 'Rock' && computerSelection === 'Rock') {
             round += 1
             turnLabel()
+            addScoreLabel()
             return `It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Paper' && computerSelection === 'Paper') {
             round += 1
             turnLabel()
+            addScoreLabel()
             return `It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors') {
             round += 1
             turnLabel()
+            addScoreLabel()
             return `It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Lizard' && computerSelection === 'Lizard') {
             round += 1
             turnLabel()
+            addScoreLabel()
             return `It's a tie. You both use ${playerSelection}`
         } else if (playerSelection === 'Spock' && computerSelection === 'Spock') {
             round += 1
             turnLabel()
+            addScoreLabel()
             return `It's a tie. You both use ${playerSelection}`
         } else {
             round += 1
             computerScore += 1
             turnLabel()
+            addScoreLabel()
             return `Wrong input! Score goes to Computer`
         }
     }
@@ -183,6 +209,11 @@ function game() {
 function turnLabel() {
     labelPlayerTurn.textContent = playerSelection;
     labelComputerTurn.textContent = computerSelection;
+}
+
+function addScoreLabel() {
+    labelPlayerScore.textContent = playerScore;
+    labelComputerScore.textContent = computerScore;
 }
 
 //Event Listeners
@@ -233,7 +264,7 @@ const labelPlayerTurn = document.querySelector('#player-window h3')
 const labelPlayerScore = document.querySelector('#player-score strong')
 
 const labelComputerTurn = document.querySelector('#computer-window h3')
-const labelComputerScore = document.querySelector('#computer-score strrong')
+const labelComputerScore = document.querySelector('#computer-score strong')
 
 const turnScreen = document.querySelector('#turn-screen p')
 
