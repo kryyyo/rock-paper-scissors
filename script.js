@@ -129,6 +129,7 @@ function playRound(playerSelection, computerSelection) {
 function resetScore() {
     playerScore = 0;
     computerScore = 0;  
+    turnScreen.textContent = '';
 }
 
 function checkScore(playerScore, computerScore) {
@@ -149,6 +150,8 @@ function game() {
     const result = playRound(playerSelection, computerSelection)
     console.log(result)
 }
+
+
 //Event Listeners
 
 const playButton = document.querySelector('.btn-reset')
@@ -159,3 +162,49 @@ rock.addEventListener('click', () => {
     playerSelection = rock.innerText;
     game()
 })
+
+const paper = document.querySelector('#player-paper-turn')
+paper.addEventListener('click', () => {
+    playerSelection = paper.innerText;
+    game()
+})
+
+const scissors = document.querySelector('#player-scissor-turn')
+scissors.addEventListener('click', () => {
+    playerSelection = scissors.innerText;
+    game()
+})
+
+const lizard = document.querySelector('#player-lizard-turn')
+lizard.addEventListener('click', () => {
+    playerSelection = lizard.innerText;
+    game()
+})
+
+const spock = document.querySelector('#player-spock-turn')
+spock.addEventListener('click', () => {
+    playerSelection = spock.innerText;
+    game()
+})
+
+
+//Computer Buttons (for highlighting)
+const compRock = document.querySelector('#computer-rock-turn')
+const compPaper = document.querySelector('#computer-paper-turn')
+const compScissors = document.querySelector('#computer-scissors-turn')
+const compLizard = document.querySelector('#computer-lizard-turn')
+const compSpock = document.querySelector('#computer-spock-turn')
+
+//Labels
+const labelPlayerTurn = document.querySelector('#player-window h3')
+const labelPlayerScore = document.querySelector('#player-score strong')
+
+const labelcomputerTurn = document.querySelector('#computer-window h3')
+const labelcomputerScore = document.querySelector('#computer-score strrong')
+
+const turnScreen = document.querySelector('#turn-screen p')
+
+//Pictures to Gifs
+const imagePlayerGif = document.querySelector('#player-window img')
+const imageComputerGif = document.querySelector('#computer-window img')
+
